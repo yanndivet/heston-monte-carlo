@@ -171,6 +171,5 @@ pip install numpy scipy numba matplotlib jupyter
 ---
 
 **Author**: Yann Divet  
-**Date**: December 2024  
 
 *Advanced stochastic volatility modelling with Monte Carlo simulation* 📈
