@@ -33,6 +33,13 @@ dW₁dW₂ = ρ dt
 
 For detailed analysis and examples, see `Heston_Analysis.ipynb`.
 
+**To view the interactive plots and full analysis results:**
+1. Clone this repository
+2. Install dependencies: `pip install numpy scipy matplotlib jupyter`
+3. Run: `jupyter notebook Heston_Analysis.ipynb`
+
+*Note: The notebook contains comprehensive visualisations and analysis that are best viewed when executed locally.*
+
 
 ## Results & Validation
 

@@ -110,10 +110,12 @@ dmypy.json
 Thumbs.db
 
 # Plots and outputs
-*.png
 *.pdf
 plots/
 output/
+
+# Keep sample plot
+!sample_distribution.png
 
 # Claude
 .claude/
