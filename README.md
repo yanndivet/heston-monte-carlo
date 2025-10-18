@@ -13,16 +13,6 @@ This project provides a modern implementation of the Heston stochastic volatilit
 - **Comprehensive Analysis**: Option pricing, Greeks calculation, and model validation
 - **Interactive Visualisation**: Detailed Jupyter notebook with financial insights
 
-## Key Features
-
-| Feature | Description |
-|---------|-------------|
-| **Heston Model** | Full stochastic volatility implementation with correlation |
-| **Multiple Schemes** | Euler & Milstein discretisation |
-| **Variance Reduction** | Antithetic variates & Sobol sequences |
-| **Option Pricing** | European calls/puts with Greeks |
-| **Path Simulation** | Vectorised Monte Carlo implementation |
-
 ## Heston Stochastic Volatility Model
 
 The Heston model captures realistic equity dynamics through stochastic volatility:
@@ -39,34 +29,9 @@ dW₁dW₂ = ρ dt
 - **Leverage Effect**: Negative correlation ρ between returns and volatility
 - **Closed-Form Solutions**: Available for European options via characteristic functions
 
-## Quick Start
+## Usage
 
-### Interactive Analysis
-```bash
-jupyter notebook Heston_Analysis.ipynb
-```
-
-### Direct Usage
-```python
-from heston_mc import HestonConfig, SimulationConfig, HestonPricer
-
-# Configure model parameters
-heston_config = HestonConfig(
-    S0=100.0, K=100.0, r=0.05, T=1.0, V0=0.04,
-    kappa=2.0, theta=0.04, eta=0.3, rho=-0.7
-)
-
-# Configure simulation
-sim_config = SimulationConfig(
-    n_paths=50000, n_steps=100, scheme='milstein',
-    use_antithetic=True, seed=42
-)
-
-# Price options
-pricer = HestonPricer(heston_config)
-call_result = pricer.price_call(sim_config)
-print(f"Call price: {call_result.price:.4f}")
-```
+For detailed analysis and examples, see `Heston_Analysis.ipynb`.
 
 
 ## Results & Validation
@@ -121,12 +86,6 @@ V_{t+1} = V_t + κ(θ - V_t)Δt + η√V_t √Δt W₂ + ¼η²Δt(W₂² - 1)
 2κθ > η²  →  Prevents variance from reaching zero
 ```
 
-## Installation & Requirements
-
-```bash
-pip install numpy scipy matplotlib jupyter
-```
-
 ## Project Structure
 
 ```
@@ -139,13 +98,6 @@ pip install numpy scipy matplotlib jupyter
     ├── variance_reduction/      # Monte Carlo enhancements
     └── utils/                   # Utilities and validation
 ```
-
-## Applications
-
-- **Option Pricing**: European calls, puts, and exotic derivatives
-- **Risk Management**: VaR calculations and stress testing
-- **Portfolio Optimisation**: Multi-asset correlation modelling
-- **Model Calibration**: Fitting to market volatility surfaces
 
 ## References
 

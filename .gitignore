@@ -114,3 +114,6 @@ Thumbs.db
 *.pdf
 plots/
 output/
+
+# Claude
+.claude/
