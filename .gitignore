@@ -117,5 +117,7 @@ output/
 # Keep sample plot
 !sample_distribution.png
 
-# Claude
+# Claude - never commit these
 .claude/
+claude
+claude/
